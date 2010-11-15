@@ -12,7 +12,7 @@
     	set nocompatible  "關閉vi相容模式
 	set nobackup	  "編輯時不作備份
 	set nowb	  "覆寫前不作備份
-	set noswapfile
+	set noswapfile    "?
         set number        "顯示行數
 	set cmdheight=2	  "命令列高度
         set ruler	  "在狀態列顯示遊標所在處之狀態
@@ -22,7 +22,7 @@
 "排版設定：
 
 	set autoindent	 		 "自動縮排
-	set smartindent  		 "補齊括弧
+	set smartindent 		 "補齊括弧
 	set backspace=indent,eol,start   "backspace可刪去所有字元
 	set expandtab
 	set softtabstop=4                "按一次tab空出四個空白字元 
