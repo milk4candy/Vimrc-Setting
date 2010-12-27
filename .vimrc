@@ -17,25 +17,44 @@
 	set cmdheight=2	  "命令列高度
         set ruler	  "在狀態列顯示遊標所在處之狀態
         set bg=dark	  "背景爲dark
+        colorscheme slate
 "----------------------------------------------------------------------------------------
 "
 "排版設定：
 
 	set autoindent	 		 "自動縮排
-	set smartindent 		 "補齊括弧
+	set smartindent 		 
 	set backspace=indent,eol,start   "backspace可刪去所有字元
 	set expandtab
 	set softtabstop=4                "按一次tab空出四個空白字元 
 	set tabstop=8			 "tab長度爲八個字元（Ctrl+v+tab）
-	set shiftwidth=4 
+	set shiftwidth=4
+
+        "補齊括弧
+        :inoremap ( ()<ESC>i
+        :inoremap ) <c-r>=ClosePair(')')<CR>
+        :inoremap { {}<ESC>i
+        :inoremap } <c-r>=ClosePair('}')<CR>
+        :inoremap [ []<ESC>i
+        :inoremap ] <c-r>=ClosePair(']')<CR>
+        :inoremap < <><ESC>i
+        :inoremap > <c-r>=ClosePair('>')<CR>
+
+        function ClosePair(char)
+            if getline('.')[col('.') - 1] == a:char
+                return "\<Right>"
+            else
+                return a:char
+            endif
+        endf
 "----------------------------------------------------------------------------------------
 "
 "文字編碼設定
 "
-	set fileencodings=utf-8
-	set termencoding=utf-8
-	set enc=utf-8
-	set tenc=utf-8
+	set fileencodings=utf8
+	set termencoding=utf8
+	set enc=utf8
+	set tenc=utf8
 "----------------------------------------------------------------------------------------
 "
 "搜尋設定
