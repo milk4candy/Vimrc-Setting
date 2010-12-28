@@ -30,23 +30,17 @@
 	set tabstop=8			 "tab長度爲八個字元（Ctrl+v+tab）
 	set shiftwidth=4
 
-        "補齊括弧
-        :inoremap ( ()<ESC>i
-        :inoremap ) <c-r>=ClosePair(')')<CR>
-        :inoremap { {}<ESC>i
-        :inoremap } <c-r>=ClosePair('}')<CR>
-        :inoremap [ []<ESC>i
-        :inoremap ] <c-r>=ClosePair(']')<CR>
-        :inoremap < <><ESC>i
-        :inoremap > <c-r>=ClosePair('>')<CR>
+        " 補齊括弧
+        " 語法
+        " inoremap  triger_char  mapping_str 
+        " 映射指令    觸發字元     映射字串
+        " 註：<LEFT> 為向右鍵字元
+        inoremap ( ()<LEFT>
+        inoremap [ []<LEFT>
+        inoremap { {}<LEFT> 
+        inoremap ' ''<LEFT>
+        inoremap " ""<LEFT>
 
-        function ClosePair(char)
-            if getline('.')[col('.') - 1] == a:char
-                return "\<Right>"
-            else
-                return a:char
-            endif
-        endf
 "----------------------------------------------------------------------------------------
 "
 "文字編碼設定
