@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/peter'
+let g:netrw_dirhist_2='/home'
+let g:netrw_dirhist_3='/'
+let g:netrw_dirhist_4='/var'
+let g:netrw_dirhist_5='/var/www'
+let g:netrw_dirhist_6='/var/www/6vocabulary'
+let g:netrw_dirhist_7='/home/peter/temp/FW71'
+let g:netrw_dirhist_8='/home/peter/proj/data-receiver'
+let g:netrw_dirhist_9='/usr/share/vim/vim72/syntax'
