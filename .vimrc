@@ -17,6 +17,8 @@
 	set cmdheight=2	  "命令列高度
         set ruler	  "在狀態列顯示遊標所在處之狀態
         set bg=dark	  "背景爲dark
+        set ff=unix       "指定寫入檔案時置放unix格式的EOL(end of line)
+        set ffs=unix      "指定只用unix格式讀入檔案
         colorscheme slate
 "----------------------------------------------------------------------------------------
 "
@@ -148,7 +150,7 @@
 		              \ | wincmd p | diffthis
     endif
 "----------------------------------------------------------------------------------------
-" --- for phpDocumentor ---
+" --- for phpDocumentor comment autoPop---
 
 source ~/.vim/plugin/php-doc.vim  	
 
